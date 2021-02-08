@@ -16,19 +16,19 @@ describe("is odd or even", () => {
 describe("get person", () => {
 
     test("32 year olds can drive", () => {
-        expect(getPerson("tim", 32)).toHaveProperty("canDrive", true);
+        expect(getPerson(32, 0)).toHaveProperty("canDrive", true);
     });
 
     test("12 year olds can't drive", () => {
-        expect(getPerson("rebecca", 12)).toHaveProperty("canDrive", false);
+        expect(getPerson(12, 0)).toHaveProperty("canDrive", false);
     });
 
-    test("21 year olds can drink", () => {
-        expect(getPerson("jessica", 21)).toHaveProperty("canDrink", true);
+    test("owning any cats means they own cats", () => {
+        expect(getPerson(21, 2)).toHaveProperty("catOwnerStatus", "some");
     });
 
-    test("2 year olds cannot drink", () => {
-        expect(getPerson("wendy", 2)).toHaveProperty("canDrink", false);
+    test("owning no cats means they own no cats", () => {
+        expect(getPerson(21, 0)).toHaveProperty("catOwnerStatus", "none");
     });
 })
 
