@@ -64,10 +64,17 @@ function getPerson(age, numberOfCats) {
         someone.canDrive = false;
     }
 
+<<<<<<< HEAD
     if (numberOfCats > 0) {
         someone.catOwnerStatus = "some";
     } else {
         someone.catOwnerStatus = "none";
+=======
+    if (someone.age > 20) {
+        someone.canDrink = true;
+    } else {
+        someone.canDrink = false;
+>>>>>>> e8b31f402cd60afb0adb2735417321622675d8da
     }
 
     return someone;

@@ -16,6 +16,7 @@ describe("is odd or even", () => {
 describe("get person", () => {
 
     test("32 year olds can drive", () => {
+<<<<<<< HEAD
         expect(getPerson(32, 0)).toHaveProperty("canDrive", true);
     });
 
@@ -31,3 +32,21 @@ describe("get person", () => {
         expect(getPerson(21, 0)).toHaveProperty("catOwnerStatus", "none");
     });
 })
+=======
+        expect(getPerson("tim", 32)).toHaveProperty("canDrive", true);
+    });
+
+    test("12 year olds can't drive", () => {
+        expect(getPerson("rebecca", 12)).toHaveProperty("canDrive", false);
+    });
+
+    test("21 year olds can drink", () => {
+        expect(getPerson("jessica", 21)).toHaveProperty("canDrink", true);
+    });
+
+    test("2 year olds cannot drink", () => {
+        expect(getPerson("wendy", 2)).toHaveProperty("canDrink", false);
+    });
+})
+
+>>>>>>> e8b31f402cd60afb0adb2735417321622675d8da
