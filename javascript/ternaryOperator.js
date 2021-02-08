@@ -32,11 +32,7 @@ else {
 // returns:
 // a string representing whether `num` is odd or even
 function isOddOrEven(num) {
-    if (num % 2 === 0) {
-        return "even";
-    } else {
-        return "odd";
-    }
+    return num % 2 === 0 ? "even" : "odd";
 }
 
 // Combining two statements
@@ -54,23 +50,13 @@ function isOddOrEven(num) {
 // `age` the age of the person (number)
 //
 // returns:
-// { name: string, age: number, canDrive: boolean, canDrink: boolean }
-function getPerson(name, age) {
-    let someone = { name, age };
-
-    if (someone.age > 15) {
-        someone.canDrive = true;
-    } else {
-        someone.canDrive = false;
-    }
-
-    if (someone.age > 20) {
-        someone.canDrink = true;
-    } else {
-        someone.canDrink = false;
-    }
-
-    return someone;
+// { name: string, age: number, canDrive: boolean }
+function getPerson(age, numberOfCats) {
+    return {
+        age,
+        canDrive: age > 15 ? true : false,
+        catOwnerStatus: numberOfCats > 0 ? "some" : "none"
+    };
 }
 
 module.exports = {
